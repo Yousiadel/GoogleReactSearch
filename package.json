@@ -1,0 +1,49 @@
+{
+  "name": "google-books-search",
+  "version": "1.0.0",
+  "description": "react google books search application",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV='production' && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\" ",
+    "install": "cd client && npm install",
+    "client": "cd client && npm run start",
+    "build": "cd client && npm run build"
+  },
+  "private": true,
+  "homepage": "https://react-google-books-bxxdyz.herokuapp.com/",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bxxdyz/react-google-books.git"
+  },
+  "author": "bxxdyz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bxxdyz/react-google-books/issues"
+  }
+}
